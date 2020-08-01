@@ -89,13 +89,14 @@ function RegisterPage(props) {
           values,
           touched,
           errors,
-          dirty,
           isSubmitting,
           handleChange,
           handleBlur,
           handleSubmit,
-          handleReset,
         } = props;
+
+         // dirty,
+          //handleReset,
         return (
           <div className="app">
             <h2>Sign up</h2>
