@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { Menu } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -7,7 +8,7 @@ function LeftMenu(props) {
   return (
     <Menu mode={props.mode}>
     <Menu.Item key="mail">
-      <a href="/">Home</a>
+      <Link to="/">Home</Link>
     </Menu.Item>
     <SubMenu title={<span>Blogs</span>}>
       <MenuItemGroup title="Item 1">
@@ -19,6 +20,10 @@ function LeftMenu(props) {
         <Menu.Item key="setting:4">Option 4</Menu.Item>
       </MenuItemGroup>
     </SubMenu>
+
+    <Menu.Item key="mail">
+      <Link to="/chat">Chat</Link>
+    </Menu.Item>
   </Menu>
   )
 }
